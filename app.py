@@ -15,7 +15,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Reconocimiento de Imágenes")
 #st.write("Versión de Python:", platform.python_version())
-image = Image.open('OIG5.jpg')
+image = Image.open('reconocimientoimagen.jpg')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
@@ -41,7 +41,7 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.5:
-      st.header('Sofia, con Probabilidad: '+str( prediction[0][0]) )
+      st.header('La persona de la foto es Sofia, con una probabilidad de: '+str( prediction[0][0]) )
     if prediction[0][1]>0.5:
       st.header('Arriba, con Probabilidad: '+str( prediction[0][1]))
     #if prediction[0][2]>0.5:
