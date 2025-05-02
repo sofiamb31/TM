@@ -17,6 +17,8 @@ st.title("Reconocimiento de Imágenes")
 #st.write("Versión de Python:", platform.python_version())
 image = Image.open('reconocimientoimagen.jpg')
 st.image(image, width=350)
+image = Image.open('reconocimiento.jpg')
+st.image(image, width=350)
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
 img_file_buffer = st.camera_input("Toma una Foto")
